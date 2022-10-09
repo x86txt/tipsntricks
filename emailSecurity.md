@@ -25,16 +25,16 @@ We can use a TXT record for this with the following format:
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://shields.secunit.io/github/contributors/x86txt/prtg.svg?style=for-the-badge
-[contributors-url]: https://github.com/x86txt/prtg/graphs/contributors
-[forks-shield]: https://shields.secunit.io/github/forks/x86txt/prtg.svg?style=for-the-badge
-[forks-url]: https://github.com/x86txt/prtg/network/members
-[stars-shield]: https://shields.secunit.io/github/stars/x86txt/prtg.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://shields.secunit.io/github/issues/x86txt/prtg.svg?style=for-the-badge
-[issues-url]: https://github.com/x86txt/prtg/issues
-[license-shield]: https://shields.secunit.io/github/license/x86txt/prtg.svg?style=for-the-badge
-[license-url]: https://github.com/x86txt/prtg/blob/main/LICENSE
+[contributors-shield]: https://shields.secunit.io/github/contributors/x86txt/tipsntricks.svg?style=for-the-badge
+[contributors-url]: https://github.com/x86txt/tipsntricks/graphs/contributors
+[forks-shield]: https://shields.secunit.io/github/forks/x86txt/tipsntricks.svg?style=for-the-badge
+[forks-url]: https://github.com/x86txt/tipsntricks/network/members
+[stars-shield]: https://shields.secunit.io/github/stars/x86txt/tipsntricks.svg?style=for-the-badge
+[stars-url]: https://github.com/x86txt/tipsntricks/stargazers
+[issues-shield]: https://shields.secunit.io/github/issues/x86txt/tipsntricks.svg?style=for-the-badge
+[issues-url]: https://github.com/x86txt/tipsntricks/issues
+[license-shield]: https://shields.secunit.io/github/license/tipsntricks/prtg.svg?style=for-the-badge
+[license-url]: https://github.com/x86txt/tipsntricksg/blob/main/LICENSE
 [linkedin-shield]: https://shields.secunit.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/mevanssecurity/
 [product-screenshot]: images/screenshot.png
