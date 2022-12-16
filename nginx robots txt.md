@@ -7,3 +7,4 @@
        return 200 "User-agent: *\nDisallow: /\n";
     }
 ```
+See [https://moz.com/learn/seo/robotstxt](https://moz.com/learn/seo/robotstxt) for more options.
