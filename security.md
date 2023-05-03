@@ -2,6 +2,17 @@
 
 ### Common Usage, i.e. "Security 101"
 - always put in the effort to minimally scope account, policy, role, or token privilege (principle of least privilege)[^1]
+- create a limited USER in your Dockerfile and switch to it with the USER command[^3].
+  ```docker
+  RUN groupadd -r appuser -g 433 && \
+      useradd -u 431 -r -g appuser -s /sbin/nologin -c "Docker image user" appuser
+      
+  USER root
+  RUN  somecommand.sh     # command that needs root
+  RUN  anothercommand.sh  # another command that needs root
+  
+  USER appuser           # switch back to the limited user
+  ```
 
 ### AWS
 
@@ -24,10 +35,11 @@
 - use CODEOWNERS to prevent senstive files or actions being overwritten without approval  
   - https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners  
 
-- Github Actions[^2]:  
+- Github Actions[^3]:  
   - don't use structured data (i.e. JSON, XML, YAML) in secrets
   - use intermediate environment variable for untrusted input
     - accept the input into a variable, then use THAT variable in your sensitive function
 
 [^1]: [https://en.wikipedia.org/wiki/Principle_of_least_privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege)  
-[^2]: [Github's Official Guidance](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions)
+[^2]: [Docker USER reference](https://docs.docker.com/engine/reference/builder/#user)
+[^3]: [Github's Official Guidance](https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions)
