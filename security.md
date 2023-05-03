@@ -1,6 +1,6 @@
 ## high-level security precautions for various cloud environments and products
 
-### Common Usage, i.e. "Security 101"
+## Common Usage, i.e. "Security 101"
 - always put in the effort to minimally scope account, policy, role, or token privilege[^1]
 - create a limited USER in your Dockerfile and switch to it with the USER command[^2]
   ```docker
@@ -14,22 +14,21 @@
   USER appuser           # switch back to the limited user
   ```
 
-### AWS
+## AWS
 
-#### ALB
+### ALB:
 - only allow traffic to ALB from Cloudfront or Cloudflare
   - from Cloudflare: can use simple Lambda to scrape https://www.cloudflare.com/ips/
   - from Cloudfront: https://aws.amazon.com/blogs/networking-and-content-delivery/limit-access-to-your-origins-using-the-aws-managed-prefix-list-for-amazon-cloudfront/
-    - use IPs in NACLs as backup
+    - use IPs in NACLs as 2nd layer - "security is like an onion"
 
-#### Fargate 
+### Fargate: 
 - create security group for cluster service that only allows traffic to the service from the ALB security group
 
-#### ECR
+### ECR:
 - enable tag immutability to prevent images being overwritten
 
-
-### Github   
+## Github 
 
 - use any of the free code scanning SAST tools, see [sast-scan.yml](https://github.com/x86txt/tipsntricks/blob/5d8a801a86b7777b6406e073e228a841cd0e3af2/samples/sast-scan.yml) for example of a ready-to-go Github Action
 - use CODEOWNERS to prevent senstive files or actions being overwritten without approval  
