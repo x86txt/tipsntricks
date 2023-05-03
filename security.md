@@ -1,8 +1,8 @@
 ## high-level security precautions for various cloud environments and products
 
 ### Common Usage, i.e. "Security 101"
-- always put in the effort to minimally scope account, policy, role, or token privilege (principle of least privilege)[^1]
-- create a limited USER in your Dockerfile and switch to it with the USER command[^3].
+- always put in the effort to minimally scope account, policy, role, or token privilege[^1]
+- create a limited USER in your Dockerfile and switch to it with the USER command[^2]
   ```docker
   RUN groupadd -r appuser -g 433 && \
       useradd -u 431 -r -g appuser -s /sbin/nologin -c "Docker image user" appuser
