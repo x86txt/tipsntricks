@@ -31,7 +31,7 @@
 ## Github 
 
 - use any of the free code scanning SAST tools, see [sast-scan.yml](https://github.com/x86txt/tipsntricks/blob/5d8a801a86b7777b6406e073e228a841cd0e3af2/samples/sast-scan.yml) for example of a ready-to-go Github Action
-- use CODEOWNERS to prevent senstive files or actions being overwritten without approval  
+- use CODEOWNERS to prevent senstive files or actions being overwritten/changed without approval  
   - https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners  
 
 - Github Actions[^3]:  
