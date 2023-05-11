@@ -16,6 +16,10 @@
 
 ## AWS
 
+### General
+- install a VPN or HTTPS proxy on a .nano instance, limit access to the console from that VPC
+  - see: https://aws.amazon.com/about-aws/whats-new/2023/05/aws-management-console-private-access/
+
 ### ALB:
 - only allow traffic to ALB from Cloudfront or Cloudflare
   - from Cloudflare: can use simple Lambda to scrape https://www.cloudflare.com/ips/
