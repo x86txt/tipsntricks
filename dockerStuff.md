@@ -7,3 +7,8 @@ $ docker stop $(docker ps -q)
 ```shell
 docker build --no-cache --progress=plain -t containerName . 2>&1 | tee build.log
 ```
+
+### AWS ECS Task Definition
+- make sure to set the root file system in all containers to read only via ```"readonlyRootFilesystem": true,```
+  - this is set in JSON immediately above ```"logConfiguration": {```
+  - note the trailing comma, make sure to include that for the JSON to valiate.
