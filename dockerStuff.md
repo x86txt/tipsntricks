@@ -10,7 +10,10 @@ docker build --no-cache --progress=plain -t containerName . 2>&1 | tee build.log
 
 ### manual watchtower run to update all docker containers
 ```shell
-for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | grep -v '<none>'); do docker run --rm --name watchtower -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once --cleanup $image; done;
+for image in $(docker images --format "{{.Repository}}:{{.Tag}}" | \
+grep -v '<none>'); do docker run --rm --name watchtower \
+-v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower \
+--run-once --cleanup $image; done;
 ```
 
 ### AWS ECS Task Definition
