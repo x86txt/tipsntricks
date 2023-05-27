@@ -26,8 +26,14 @@
   - from Cloudfront: https://aws.amazon.com/blogs/networking-and-content-delivery/limit-access-to-your-origins-using-the-aws-managed-prefix-list-for-amazon-cloudfront/
     - use IPs in NACLs as 2nd layer - "security is like an onion"
 
+### Check Encryption
+- Cryptolyzer: https://cryptolyzer.readthedocs.io/en/latest/
+
 ### Fargate: 
 - create security group for cluster service that only allows traffic to the service from the ALB security group
+
+### quick httpstats module for connection request timing
+- httpstat: https://github.com/reorx/httpstat
 
 ### ECR:
 - enable tag immutability to prevent images being overwritten
